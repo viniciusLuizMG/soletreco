@@ -5,7 +5,25 @@ const keyboardSecondRow = document.querySelector("#keyboardSecondRow");
 const keyboardThirdRow = document.querySelector("#keyboardThirdRow");
 
 // Array de palavras
-const palavras = ["LETRA", "MUNDO", "JOGO", "DESAFIO", "CODES"];
+const palavras = [
+ 
+  "ELEMENTO",
+  "MOLECULAR",
+  "REACAO",
+  "MATERIA",
+  "FORMULAS",
+  "CATALISADOR",
+  "SUBSTANCIA",
+  "COMPOSTO",
+  "ESTAVEL",
+  "LIGACAO",
+  "OXIDACAO",
+  "PESQUISAR",
+  "TERMODINAMICA",
+  "EQUILIBRIO",
+  "ELETRONS ",
+  "SOLVENTE"
+];
 const palavraEscolhida = palavras[Math.floor(Math.random() * palavras.length)];
 const tamanhoPalavra = palavraEscolhida.length;
 
@@ -61,6 +79,7 @@ const checkGuess = () => {
   }
 
   if (guess === letreco) {
+    
     window.alert("Parabéns! Você adivinhou a palavra!");
     return;
   } else {
@@ -132,7 +151,7 @@ const handleBackspace = () => {
 
 const backspaceButton = document.createElement("button");
 backspaceButton.addEventListener("click", handleBackspace);
-backspaceButton.textContent = "<";
+backspaceButton.textContent = "APAGAR";
 backspaceAndEnterRow.append(backspaceButton);
 
 const enterButton = document.createElement("button");
